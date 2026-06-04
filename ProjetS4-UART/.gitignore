@@ -23,6 +23,10 @@
 .wsdata/
 logs/
 
+# Vitis component files avec paths absolus (regeneres par build_vitis.tcl)
+vitis-comp.json
+*.gitignore
+
 # BSP compiled/generated output (regenere par Vitis)
 *_bsp/
 platform_main/ps7_cortexa9_0/
