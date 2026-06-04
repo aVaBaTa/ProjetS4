@@ -31,11 +31,13 @@ app = client.create_app_component(
     template="hello_world"
 )
 
-# Copier les sources
+# Copier les sources AVANT le build
 src = os.path.join(project_dir, "hello_world", "src")
 dst = os.path.join(workspace, "hello_world", "src")
-for f in ["helloworld.c", "platform.c", "platform.h"]:
-    shutil.copy2(os.path.join(src, f), os.path.join(dst, f))
+for f in ["helloworld.c", "platform.c", "platform.h", "lscript.ld"]:
+    src_file = os.path.join(src, f)
+    if os.path.exists(src_file):
+        shutil.copy2(src_file, os.path.join(dst, f))
 
 app.build()
 print("Application hello_world construite.")
