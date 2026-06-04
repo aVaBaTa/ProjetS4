@@ -3,7 +3,7 @@ setlocal
 
 set XILINX_VERSION=2024.1
 set VIVADO=C:\Xilinx\Vivado\%XILINX_VERSION%\bin\vivado.bat
-set XSCT=C:\Xilinx\Vitis\%XILINX_VERSION%\bin\xsct.bat
+set VITIS=C:\Xilinx\Vitis\%XILINX_VERSION%\bin\vitis.bat
 
 set SCRIPT_DIR=%~dp0
 set PROJECT_DIR=%SCRIPT_DIR%..
@@ -26,7 +26,7 @@ if errorlevel 1 (
 echo ============================================
 echo  2. Build Vitis (plateforme + application)
 echo ============================================
-call "%XSCT%" "%SCRIPT_DIR%build_vitis.tcl"
+call "%VITIS%" -s "%SCRIPT_DIR%build_vitis.py"
 if errorlevel 1 (
     echo ERREUR: Vitis a echoue
     exit /b 1
