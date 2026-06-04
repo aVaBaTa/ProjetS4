@@ -18,17 +18,19 @@ platform = client.create_platform_component(
     os="standalone",
     cpu="ps7_cortexa9_0"
 )
-platform.build()
-print("Plateforme generee.")
+status = platform.build()
+print(f"Plateforme generee. Status: {status}")
 
 xpfm = os.path.join(workspace, "platform_main", "export", "platform_main", "platform_main.xpfm")
+if not os.path.exists(xpfm):
+    raise Exception(f"Platform export not found: {xpfm}")
 
 # Application
 app = client.create_app_component(
     name="hello_world",
     platform=xpfm,
     domain="standalone_domain",
-    template="hello_world"
+    template="empty_application"
 )
 
 # Copier les sources AVANT le build
