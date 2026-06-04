@@ -17,7 +17,7 @@ puts "Plateforme generee."
 app create \
     -name hello_world \
     -platform platform_main \
-    -domain standalone_ps7_cortexa9_0 \
+    -domain standalone_domain \
     -template {Hello World} \
     -lang C
 
