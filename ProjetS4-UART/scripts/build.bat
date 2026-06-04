@@ -1,9 +1,8 @@
-﻿@echo off
+@echo off
 setlocal
 
 set XILINX_VERSION=2024.1
 set VIVADO=C:\Xilinx\Vivado\%XILINX_VERSION%\bin\vivado.bat
-set VITIS=C:\Xilinx\Vitis\%XILINX_VERSION%\bin\vitis.bat
 set XSCT=C:\Xilinx\Vitis\%XILINX_VERSION%\bin\xsct.bat
 
 set SCRIPT_DIR=%~dp0
@@ -29,6 +28,5 @@ if errorlevel 1 (
 
 echo ============================================
 echo  Build termine avec succes!
-echo  Binaire: %PROJECT_DIR%\hello_world\build\hello_world.elf
 echo ============================================
 endlocal

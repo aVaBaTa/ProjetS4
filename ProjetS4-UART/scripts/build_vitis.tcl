@@ -1,4 +1,4 @@
-﻿# Script xsct pour reconstruire la plateforme Vitis et l'application
+# Script xsct pour reconstruire la plateforme Vitis et l'application
 
 set script_dir [file dirname [info script]]
 set project_dir [file normalize "$script_dir/.."]
@@ -24,7 +24,7 @@ app create \
     -name hello_world \
     -platform platform_main \
     -domain standalone_ps7_cortexa9_0 \
-    -template "Hello World" \
+    -template {Hello World} \
     -lang C \
     -out "$project_dir/hello_world"
 
