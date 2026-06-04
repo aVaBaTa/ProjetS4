@@ -25,6 +25,7 @@ logs/
 
 # Vitis component files avec paths absolus (regeneres par build_vitis.tcl)
 vitis-comp.json
+app.yaml
 *.gitignore
 
 # BSP compiled/generated output (regenere par Vitis)
