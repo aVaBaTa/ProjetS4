@@ -9,6 +9,12 @@ set SCRIPT_DIR=%~dp0
 set PROJECT_DIR=%SCRIPT_DIR%..
 
 echo ============================================
+echo  Nettoyage des anciens fichiers generes
+echo ============================================
+if exist "%PROJECT_DIR%\ProjetS4-UART" rmdir /s /q "%PROJECT_DIR%\ProjetS4-UART"
+if exist "%PROJECT_DIR%\workspace" rmdir /s /q "%PROJECT_DIR%\workspace"
+
+echo ============================================
 echo  1. Reconstruction du projet Vivado
 echo ============================================
 call "%VIVADO%" -mode batch -source "%SCRIPT_DIR%create_project.tcl"
