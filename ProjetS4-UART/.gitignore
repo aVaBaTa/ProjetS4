@@ -1,0 +1,67 @@
+﻿# Vivado generated
+*.jou
+*.log
+*.str
+*.mif
+.Xil/
+*.xpr
+*.runs/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.gen/
+*.bda
+*/ui/*.ui
+
+# Bitstream
+*.bit
+*.ltx
+
+# Vitis workspace metadata
+.lock
+.wsdata/
+logs/
+
+# BSP compiled/generated output (regenere par Vitis)
+*_bsp/
+platform_main/ps7_cortexa9_0/
+platform_main/hw/sdt/
+
+# FSBL - fourni et regenere par Vitis, pas besoin de versionner
+platform_main/zynq_fsbl/
+
+# QEMU / resources generated
+resources/
+
+# Build output
+build/
+**/build/
+
+# CMake / Ninja build artifacts
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+build.ninja
+*.ninja_deps
+*.ninja_log
+compile_commands.json
+install_manifest.txt
+
+# Vitis CMake wrappers (generes automatiquement)
+hello_world/src/CMakeLists.txt
+hello_world/src/*.cmake
+
+# Compiled objects and libraries
+*.obj
+*.a
+*.o
+*.out
+*.elf
+
+# IDE workspace
+_ide/
+.clangd
+
+# Doublon XSA a la racine seulement
+/uart_wrapper.xsa
