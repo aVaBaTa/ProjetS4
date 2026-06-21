@@ -98,3 +98,33 @@ hello_world/src/*.cmake
 !**/src/**/.gitignore
 
 vivado-library/*
+
+# ====================================================================
+# 6. CORRECTIONS DIRECTES POUR VITIS UNIFIED (VS CODE ENGINE)
+# ====================================================================
+# Dossier de configuration utilisateur local de l'éditeur
+.vscode/
+
+# Dossier d'indexation C/C++ ultra lourd généré en tâche de fond
+.clangd/
+**/.clangd/
+
+# Fichiers de configuration de l'espace de travail et logs d'extension
+*.code-workspace
+.analytics/
+
+# Bloquer tous les fichiers de build/binaires générés dans vos composants
+# (Vitis Unified met parfois les sorties directement à la racine du composant)
+_sys/
+**/_sys/
+**/*.elf
+**/*.bin
+**/*.map
+
+# Fichiers de cache de composants cachés
+**/vitis-comp.json
+**/app.yaml
+
+**/standalone_ps7_cortexa9_0/
+**/zynq_fsbl/
+**/hw/

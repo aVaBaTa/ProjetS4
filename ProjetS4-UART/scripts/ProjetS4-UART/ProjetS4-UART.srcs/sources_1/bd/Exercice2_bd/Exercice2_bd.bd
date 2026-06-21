@@ -1798,7 +1798,7 @@
       },
       "myColorRegister_0": {
         "vlnv": "xilinx.com:user:myColorRegister:1.0",
-        "ip_revision": "2",
+        "ip_revision": "3",
         "xci_name": "Exercice2_bd_myColorRegister_0_0",
         "xci_path": "ip\\Exercice2_bd_myColorRegister_0_0\\Exercice2_bd_myColorRegister_0_0.xci",
         "inst_hier_path": "myColorRegister_0"
@@ -1866,13 +1866,13 @@
           "clk_wiz_0/clk_out1",
           "v_axi4s_vid_out_0/aclk",
           "v_tc_0/clk",
-          "rgb2dvi_0/PixelClk",
-          "testPatternGenerator_0/clk",
-          "myColorRegister_0/s00_axi_aclk",
           "proc_sys_reset_0/slowest_sync_clk",
           "smartconnect_0/aclk1",
           "v_proc_ss_0/aclk_axis",
-          "v_proc_ss_0/aclk_ctrl"
+          "v_proc_ss_0/aclk_ctrl",
+          "rgb2dvi_0/PixelClk",
+          "myColorRegister_0/s00_axi_aclk",
+          "testPatternGenerator_0/clk"
         ]
       },
       "clk_wiz_0_locked": {
@@ -1901,10 +1901,10 @@
           "proc_sys_reset_0/peripheral_aresetn",
           "v_tc_0/resetn",
           "v_axi4s_vid_out_0/aresetn",
+          "v_proc_ss_0/aresetn_ctrl",
           "rgb2dvi_0/aRst_n",
-          "testPatternGenerator_0/rstn",
           "myColorRegister_0/s00_axi_aresetn",
-          "v_proc_ss_0/aresetn_ctrl"
+          "testPatternGenerator_0/rstn"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {

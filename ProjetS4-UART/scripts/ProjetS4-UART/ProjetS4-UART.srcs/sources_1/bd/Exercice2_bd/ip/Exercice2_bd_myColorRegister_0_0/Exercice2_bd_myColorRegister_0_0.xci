@@ -4,7 +4,7 @@
     "xci_name": "Exercice2_bd_myColorRegister_0_0",
     "cell_name": "myColorRegister_0",
     "component_reference": "xilinx.com:user:myColorRegister:1.0",
-    "ip_revision": "2",
+    "ip_revision": "3",
     "gen_directory": "../../../../../../ProjetS4-UART.gen/sources_1/bd/Exercice2_bd/ip/Exercice2_bd_myColorRegister_0_0",
     "parameters": {
       "component_parameters": {
@@ -20,7 +20,7 @@
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
-        "BASE_BOARD_PART": [ { "value": "digilentinc.com:zybo-z7-10:part0:1.1" } ],
+        "BASE_BOARD_PART": [ { "value": "digilentinc.com:zybo-z7-10:part0:1.0" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
         "DEVICE": [ { "value": "xc7z010" } ],
         "NEXTGEN_VERSAL": [ { "value": "0" } ],
@@ -34,8 +34,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "2" } ],
-        "LOCKEDBYUSER": [ { "value": "TRUE" } ],
+        "IPREVISION": [ { "value": "3" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../ProjetS4-UART.gen/sources_1/bd/Exercice2_bd/ip/Exercice2_bd_myColorRegister_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

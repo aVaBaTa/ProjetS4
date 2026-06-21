@@ -28,6 +28,7 @@ Avant de commencer, assurez-vous d'avoir installé :
 
 Le projet utilise des interfaces matérielles spécifiques (notamment l'interface vidéo HDMI `TMDS`) fournies par Digilent. Cette bibliothèque doit être téléchargée et placée localement.
 
+
 1. Téléchargez les sources de la bibliothèque sur le GitHub officiel de Digilent :
    👉 [Digilent vivado-library (GitHub)](https://github.com/digilent/vivado-library) (Téléchargez le fichier **ZIP** via le bouton *Code*).
 2. Créez un dossier nommé `repo` à la racine de votre dossier de projet si ce n'est pas déjà fait.
@@ -37,4 +38,19 @@ Le projet utilise des interfaces matérielles spécifiques (notamment l'interfac
 ProjetS4-UART/
 ├── vivado-library <------ Mettre ici
 
+
 4. Aller dans Vivado, dans les settings, onglet IP, onglet Repository, et mettre le bon path pour votre vivado-Library
+
+** IMPORTANT
+Ajouter aussi le ip_repo qui est dans la racine du projet dans les ip repositories
+
+** POTENTIELLEMENT NÉCESSAIRE 
+
+Créer un lecteur virtuel, le bloc design de vivado a besoin d'un fichier avec un nom salement long.
+Si besoin, et qu'on vous dit que le nom de fichier fait trop de bytes, rouler
+
+```
+subst X: {LE PATH DU PROJET SUR VOTRE ORDI}\ProjetS4-UART
+```
+
+Ça va faire un driver virtuel, vous aller pouvoir ouvrir le PROJETS4-UART.xpr directement à partir de là, et ce problème là devrait être régler.
