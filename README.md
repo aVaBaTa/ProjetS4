@@ -54,3 +54,5 @@ subst X: {LE PATH DU PROJET SUR VOTRE ORDI}\ProjetS4-UART
 ```
 
 Ça va faire un driver virtuel, vous aller pouvoir ouvrir le PROJETS4-UART.xpr directement à partir de là, et ce problème là devrait être régler.
+
+Il est aussi possible que vous devez ajouter à la main les liens vers les fichiers sources et le fichier de contraintes
