@@ -52,6 +52,7 @@ Si besoin, et qu'on vous dit que le nom de fichier fait trop de bytes, rouler
 ```
 subst X: {LE PATH DU PROJET SUR VOTRE ORDI}\ProjetS4-UART
 ```
+subst X: C:\Uni_Sherb\S4\Projet\projet\ProjetS4-UART 
 
 Ça va faire un driver virtuel, vous aller pouvoir ouvrir le PROJETS4-UART.xpr directement à partir de là, et ce problème là devrait être régler.
 

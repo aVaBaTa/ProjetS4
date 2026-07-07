@@ -7,8 +7,7 @@
       "name": "Exercice2_bd",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "None",
-      "tool_version": "2024.1",
-      "validated": "true"
+      "tool_version": "2024.1"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -20,7 +19,8 @@
       "v_proc_ss_0": "",
       "smartconnect_0": "",
       "testPatternGenerator_0": "",
-      "myColorRegister_0": ""
+      "myColorRegister_0": "",
+      "ppu_top_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -197,20 +197,8 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
-          "CLK_DOMAIN": {
-            "value": "Exercice2_bd_sys_clock",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "125000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
           },
           "PHASE": {
             "value": "0.0"
@@ -221,10 +209,6 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
           "POLARITY": {
             "value": "ACTIVE_HIGH"
           }
@@ -1535,20 +1519,20 @@
                   "width": "18",
                   "usage": "register",
                   "bank_blocks": {
-                    "SEG_hsc_Reg;/hsc/s_axi_CTRL/Reg;xilinx.com:ip:v_hscaler:1.1;/hsc;s_axi_CTRL;C_S_AXI_CTRL_BASEADDR;C_S_AXI_CTRL_HIGHADDR": {
-                      "base_address": "0x00000",
-                      "range": "64K",
-                      "width": "16",
-                      "usage": "register"
-                    },
-                    "SEG_reset_sel_axis_Reg;/reset_sel_axis/S_AXI/Reg;xilinx.com:ip:axi_gpio:2.0;/reset_sel_axis;S_AXI;NONE;NONE": {
+                    "SEG_reset_sel_axis_Reg;Reg;xilinx.com:ip:axi_gpio:2.0;reset_sel_axis;S_AXI;NONE;NONE": {
                       "base_address": "0x10000",
                       "range": "64K",
                       "width": "16",
                       "usage": "register"
                     },
-                    "SEG_vsc_Reg;/vsc/s_axi_CTRL/Reg;xilinx.com:ip:v_vscaler:1.1;/vsc;s_axi_CTRL;C_S_AXI_CTRL_BASEADDR;C_S_AXI_CTRL_HIGHADDR": {
+                    "SEG_vsc_Reg;Reg;xilinx.com:ip:v_vscaler:1.1;vsc;s_axi_CTRL;C_S_AXI_CTRL_BASEADDR;C_S_AXI_CTRL_HIGHADDR": {
                       "base_address": "0x20000",
+                      "range": "64K",
+                      "width": "16",
+                      "usage": "register"
+                    },
+                    "SEG_hsc_Reg;Reg;xilinx.com:ip:v_hscaler:1.1;hsc;s_axi_CTRL;C_S_AXI_CTRL_BASEADDR;C_S_AXI_CTRL_HIGHADDR": {
+                      "base_address": "0x00000",
                       "range": "64K",
                       "width": "16",
                       "usage": "register"
@@ -1571,7 +1555,7 @@
             "value": "2"
           },
           "NUM_MI": {
-            "value": "2"
+            "value": "3"
           },
           "NUM_SI": {
             "value": "1"
@@ -1582,80 +1566,26 @@
             "mode": "Slave",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "parameters": {
-              "NUM_READ_OUTSTANDING": {
-                "value": "8"
-              },
-              "NUM_WRITE_OUTSTANDING": {
-                "value": "8"
-              }
-            },
             "bridges": [
               "M00_AXI",
-              "M01_AXI"
+              "M01_AXI",
+              "M02_AXI"
             ]
           },
           "M00_AXI": {
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "parameters": {
-              "MAX_BURST_LENGTH": {
-                "value": "1"
-              },
-              "NUM_READ_OUTSTANDING": {
-                "value": "8"
-              },
-              "NUM_READ_THREADS": {
-                "value": "1"
-              },
-              "NUM_WRITE_OUTSTANDING": {
-                "value": "8"
-              },
-              "NUM_WRITE_THREADS": {
-                "value": "1"
-              },
-              "RUSER_BITS_PER_BYTE": {
-                "value": "0"
-              },
-              "SUPPORTS_NARROW_BURST": {
-                "value": "0"
-              },
-              "WUSER_BITS_PER_BYTE": {
-                "value": "0"
-              }
-            }
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
           },
           "M01_AXI": {
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "parameters": {
-              "MAX_BURST_LENGTH": {
-                "value": "1"
-              },
-              "NUM_READ_OUTSTANDING": {
-                "value": "8"
-              },
-              "NUM_READ_THREADS": {
-                "value": "1"
-              },
-              "NUM_WRITE_OUTSTANDING": {
-                "value": "8"
-              },
-              "NUM_WRITE_THREADS": {
-                "value": "1"
-              },
-              "RUSER_BITS_PER_BYTE": {
-                "value": "0"
-              },
-              "SUPPORTS_NARROW_BURST": {
-                "value": "0"
-              },
-              "WUSER_BITS_PER_BYTE": {
-                "value": "0"
-              }
-            }
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "M02_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
           }
         }
       },
@@ -1802,9 +1732,29 @@
         "xci_name": "Exercice2_bd_myColorRegister_0_0",
         "xci_path": "ip\\Exercice2_bd_myColorRegister_0_0\\Exercice2_bd_myColorRegister_0_0.xci",
         "inst_hier_path": "myColorRegister_0"
+      },
+      "ppu_top_0": {
+        "vlnv": "xilinx.com:user:ppu_top:1.0",
+        "ip_revision": "2",
+        "xci_name": "Exercice2_bd_ppu_top_0_1",
+        "xci_path": "ip\\Exercice2_bd_ppu_top_0_1\\Exercice2_bd_ppu_top_0_1.xci",
+        "inst_hier_path": "ppu_top_0",
+        "interface_ports": {
+          "s00_axi": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "memory_map_ref": "s00_axi"
+          }
+        }
       }
     },
     "interface_nets": {
+      "ppu_top_0_m_axis": {
+        "interface_ports": [
+          "ppu_top_0/m_axis",
+          "v_proc_ss_0/s_axis"
+        ]
+      },
       "processing_system7_0_DDR": {
         "interface_ports": [
           "DDR",
@@ -1832,13 +1782,13 @@
       "smartconnect_0_M01_AXI": {
         "interface_ports": [
           "smartconnect_0/M01_AXI",
-          "myColorRegister_0/S00_AXI"
+          "ppu_top_0/s00_axi"
         ]
       },
-      "testPatternGenerator_0_m_axis": {
+      "smartconnect_0_M02_AXI": {
         "interface_ports": [
-          "testPatternGenerator_0/m_axis",
-          "v_proc_ss_0/s_axis"
+          "smartconnect_0/M02_AXI",
+          "myColorRegister_0/S00_AXI"
         ]
       },
       "v_axi4s_vid_out_0_vid_io_out": {
@@ -1872,7 +1822,8 @@
           "v_proc_ss_0/aclk_ctrl",
           "rgb2dvi_0/PixelClk",
           "myColorRegister_0/s00_axi_aclk",
-          "testPatternGenerator_0/clk"
+          "testPatternGenerator_0/clk",
+          "ppu_top_0/s00_axi_aclk"
         ]
       },
       "clk_wiz_0_locked": {
@@ -1904,7 +1855,8 @@
           "v_proc_ss_0/aresetn_ctrl",
           "rgb2dvi_0/aRst_n",
           "myColorRegister_0/s00_axi_aresetn",
-          "testPatternGenerator_0/rstn"
+          "testPatternGenerator_0/rstn",
+          "ppu_top_0/s00_axi_aresetn"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
@@ -1957,6 +1909,11 @@
                 "range": "64K",
                 "offset_base_param": "C_S00_AXI_BASEADDR",
                 "offset_high_param": "C_S00_AXI_HIGHADDR"
+              },
+              "SEG_ppu_top_0_reg0": {
+                "address_block": "/ppu_top_0/s00_axi/reg0",
+                "offset": "0x40000000",
+                "range": "4K"
               },
               "SEG_v_proc_ss_0_Reg": {
                 "address_block": "/v_proc_ss_0/s_axi_ctrl/Reg",
